@@ -250,7 +250,7 @@ span#duration {
 
 article#music-list {
     width: 518px;
-    height: 380px;
+    height: 300px;
     margin: 0px auto;
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
     box-shadow: 1px 0px 2px 2px rgba(0,0,0,.1);
