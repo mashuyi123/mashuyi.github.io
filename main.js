@@ -12,7 +12,7 @@
 		nextElement = document.getElementById("music-next"),
 		preElement = document.getElementById("music-pre"),
 		musicTitleElement = document.getElementById("music-title"),
-		//addMusicElement = document.getElementById("add-music"),
+		addMusicElement = document.getElementById("add-music"),
 		albumPicElment = document.getElementById("picture"),
 		musicPlayer = document.getElementById("music-player"),
 		musicUL = document.getElementById("musics"),
@@ -216,11 +216,11 @@
 		}
 	});
 
-/*
+
 	addMusicElement.addEventListener("click", function(event) {
 		fileElement.click();
 	});
-*/
+
 	// set current time by progress element in dom
 	progressElement.addEventListener("click", function(event) {
 		var t = (event.offsetX / 470).toFixed(2);
@@ -264,6 +264,9 @@
 		removeSelected(index);
 		index = musicQueue.getIndexByName(music.name);
 		setSelected(index);
+
+		changeImage(index);
+
 	}
 
 	// set music total time in dom
@@ -313,7 +316,7 @@
 		this.src = src;
 	}
 
-	function changeImage() {
+	function changeImage(index) {
 		/*
 		var num = parseInt(Math.random() * 16),
 			src;	
@@ -321,9 +324,17 @@
 		num = (num > 0) ? num : num + 1;
 		src = "raw/" + num + ".jpg";
 		albumPicElment.src = src;
+
 		*/
-		
-		src = "pic/xiao.jpg";
+		if(index == "4")
+		{
+			src = "pic/xue.jpg";
+		}
+		else
+		{
+			src = "pic/xiao.jpg";
+
+		}
 		albumPicElment.src = src;
 	}
 

@@ -254,9 +254,27 @@ article#music-list {
     margin: 0px auto;
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
     box-shadow: 1px 0px 2px 2px rgba(0,0,0,.1);
+    /*
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    border-top: 4px solid #fff;
+    */
+    border-top: 2px solid #fff;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 18px;
+    line-height: 2.5;
+    overflow: auto;
+}
+
+article#music-third-part{
+    width: 518px;
+    height: 80px;
+    margin: 0px auto;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    box-shadow: 1px 0px 2px 2px rgba(0,0,0,.1);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top: 2px solid #fff;
     font-family: sans-serif;
     color: #fff;
     font-size: 18px;
@@ -274,6 +292,23 @@ article#music-list {
     cursor: pointer;
     position: relative;
 }
+
+#music-third-part li {
+    border-bottom: 1px solid #fff;
+    padding-left: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+#music-third-part a:link { 
+color:#FFFFFF; 
+text-decoration:none; 
+} 
+
+#music-third-part a:visited { 
+color:#FFFFFF; 
+text-decoration:none; 
+} 
 
 #music-list li.selected {
     background-color: #243949;
