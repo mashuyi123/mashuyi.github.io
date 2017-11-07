@@ -12,7 +12,7 @@
 		nextElement = document.getElementById("music-next"),
 		preElement = document.getElementById("music-pre"),
 		musicTitleElement = document.getElementById("music-title"),
-		addMusicElement = document.getElementById("add-music"),
+		//addMusicElement = document.getElementById("add-music"),
 		albumPicElment = document.getElementById("picture"),
 		musicPlayer = document.getElementById("music-player"),
 		musicUL = document.getElementById("musics"),
@@ -101,14 +101,24 @@
 
 	(function init() {
 		var music1 = new Music("良宵引", "pic/1.mp3");
-		var music2= new Music("凤求凰", "pic/2.mp3");
+		var music2 = new Music("凤求凰", "pic/2.mp3");
+		var music3 = new Music("仙翁操", "pic/3.mp3");
+		var music4 = new Music("湘妃怨", "pic/4.mp3");
+		var music5 = new Music("不说话", "pic/5.mp3");
+
 		musicQueue.addMusic(music1);
-		musicQueue.addMusic(music2);
+		musicQueue.addMusic(music2);		
+		musicQueue.addMusic(music3);
+		musicQueue.addMusic(music4);
+		musicQueue.addMusic(music5);
 		musicTitleElement.innerHTML = music1.name;
 		player.src = music1.src;
 		setTimeout(setDuration, 500);
 		appendMusicToDOM("良宵引");
 		appendMusicToDOM("凤求凰");
+		appendMusicToDOM("仙翁操");
+		appendMusicToDOM("湘妃怨");
+		appendMusicToDOM("不说话");
 		setSelected(index);
 	})();
 	/* end init view */
@@ -206,10 +216,11 @@
 		}
 	});
 
+/*
 	addMusicElement.addEventListener("click", function(event) {
 		fileElement.click();
 	});
-
+*/
 	// set current time by progress element in dom
 	progressElement.addEventListener("click", function(event) {
 		var t = (event.offsetX / 470).toFixed(2);
@@ -303,11 +314,16 @@
 	}
 
 	function changeImage() {
+		/*
 		var num = parseInt(Math.random() * 16),
 			src;	
 
 		num = (num > 0) ? num : num + 1;
 		src = "raw/" + num + ".jpg";
+		albumPicElment.src = src;
+		*/
+		
+		src = "pic/xiao.jpg";
 		albumPicElment.src = src;
 	}
 
