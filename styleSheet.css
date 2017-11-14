@@ -3,11 +3,28 @@
     margin: 0;
     padding: 0;
 }
+h1{
+    width: 518px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 10px;
+}
 
-html,body {
+button{
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+html,body，h1{
     height: 100%;
     overflow: hidden;
     font-family: sans-serif;
+}
+div#extimg {
+     width: 518px;
+    margin: 0px auto;
+     margin-bottom: 0px;
 }
 body {
     background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
