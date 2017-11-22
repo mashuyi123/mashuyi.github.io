@@ -216,7 +216,6 @@
 		}
 	});
 
-
 	addMusicElement.addEventListener("click", function(event) {
 		fileElement.click();
 	});
